@@ -19,3 +19,28 @@ WHERE name = 'Basma';
 UPDATE students
 SET Points = 150
 WHERE name = 'Alex';
+
+
+
+
+
+CREATE TABLE Graduates (
+    ID INTEGER PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL UNIQUE,
+    Age INTEGER,
+    Gender VARCHAR(255),
+    Points INTEGER,
+    Graduation DATE
+);
+
+INSERT INTO Graduates (Name, Age, Gender, Points)
+SELECT Name, Age, Gender, Points
+FROM students
+WHERE name = 'Layal';
+
+UPDATE Graduates
+SET Graduation = '2018-09-08'
+WHERE name = 'Layal';
+
+DELETE FROM students WHERE name = 'Layal';
+
