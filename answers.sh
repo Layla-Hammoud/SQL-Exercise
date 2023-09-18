@@ -44,3 +44,8 @@ WHERE name = 'Layal';
 
 DELETE FROM students WHERE name = 'Layal';
 
+
+
+SELECT employees.name, employees.Company, companies.Date
+FROM employees
+INNER JOIN companies ON employees.Company = companies.name;
